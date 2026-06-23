@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+
+  .dark body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 via-amber-600 to-secondary-600 bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply border border-white/20 bg-white/70 shadow-lg backdrop-blur-xl;
+  }
+
+  .dark .glass-card {
+    @apply border-gray-700/50 bg-gray-900/70;
+  }
+
+  .nav-link {
+    @apply rounded-lg px-4 py-2 text-sm font-medium text-gray-600 transition-all hover:bg-white/60 hover:text-primary-600 dark:text-gray-300 dark:hover:bg-gray-800/60 dark:hover:text-primary-400;
+  }
+
+  .role-badge {
+    @apply rounded-full px-5 py-2.5 text-sm font-semibold shadow-sm backdrop-blur-md;
+  }
+
+  .role-badge-dev {
+    @apply border border-primary-200/60 bg-primary-50/80 text-primary-800 dark:border-primary-800/40 dark:bg-primary-900/50 dark:text-primary-300;
+  }
+
+  .role-badge-test {
+    @apply border border-secondary-200/60 bg-secondary-50/80 text-secondary-800 dark:border-secondary-800/40 dark:bg-secondary-900/50 dark:text-secondary-300;
+  }
+
+  .social-btn {
+    @apply rounded-xl border border-gray-200/60 bg-white/70 p-3 text-gray-700 shadow-sm backdrop-blur-md transition-all hover:scale-110 hover:border-primary-400 hover:bg-primary-600 hover:text-white dark:border-gray-700 dark:bg-gray-800/70 dark:text-gray-300 dark:hover:border-primary-500;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary-600 via-primary-500 to-secondary-600 px-7 py-3 font-semibold text-white shadow-lg shadow-primary-500/25 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary-500/30;
+  }
+
+  .profile-ring {
+    @apply relative h-72 w-72 sm:h-80 sm:w-80 lg:h-[22rem] lg:w-[22rem];
+  }
+
+  .profile-ring-inner {
+    @apply relative z-10 h-full w-full overflow-hidden rounded-full p-1.5 shadow-2xl shadow-primary-500/30;
+    background: linear-gradient(135deg, #0284c7, #d97706, #c026d3);
+  }
+
+  .profile-ring-inner img {
+    @apply rounded-full;
+  }
+
+  .section-heading {
+    @apply text-4xl font-extrabold sm:text-5xl;
+  }
+
+  .section-card {
+    @apply glass-card rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#portfolio-particles canvas {
+  pointer-events: auto;
+}

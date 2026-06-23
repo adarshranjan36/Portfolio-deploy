@@ -1,0 +1,13 @@
+{
+  "name": "adarsh-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Adarsh Ranjan - Software Developer & Tester",
+  "scripts": {
+    "dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "install:all": "npm install && cd client && npm install"
+  },
+  "keywords": ["portfolio", "react", "vite", "tailwindcss"],
+  "author": "Adarsh Ranjan",
+  "license": "MIT"
+}
